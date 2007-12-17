@@ -11,7 +11,6 @@ release:   %mkrel 1
 license:   LGPL
 group:     Development/GNOME and GTK+
 url:       http://www.exit1.org/download/ff
-buildroot: %{_tmppath}/%{name}-%{version}-%(id -u -n)
 buildarch: noarch
 source:    http://www.exit1.org/packages/Gtk2-Ex-FormFactory/dist/Gtk2-Ex-FormFactory-%version.tar.bz2
 BuildRequires: perl-Gtk2 perl-devel
