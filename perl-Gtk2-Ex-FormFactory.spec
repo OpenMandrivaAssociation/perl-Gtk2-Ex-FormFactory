@@ -1,19 +1,18 @@
 %define pkgname Gtk2-Ex-FormFactory
 %define NVR %{pkgname}-%{version}-%{release}
 %define maketest 1
-#fixed2
-%{?!mkrel:%define mkrel(c:) %{-c: 0.%{-c*}.}%{!?_with_unstable:%(perl -e '$_="%{1}";m/(.\*\\D\+)?(\\d+)$/;$rel=${2}-1;re;print "$1$rel";').%{?subrel:%subrel}%{!?subrel:1}.%{?distversion:%distversion}%{?!distversion:%(echo $[%{mdkversion}/10])}}%{?_with_unstable:%{1}}%{?distsuffix:%distsuffix}%{?!distsuffix:mdk}}
+%define upstream_version 0.65
 
 name:      perl-Gtk2-Ex-FormFactory
 summary:   Gtk2-Ex-FormFactory - Makes building complex GUI's easy
-Version:   0.65
+Version:   %perl_convert_version %upstream_version
 release:   %mkrel 1
-license:   LGPL
+license:   LGPLv2+
 group:     Development/GNOME and GTK+
 url:       http://www.exit1.org/download/ff
 buildroot: %{_tmppath}/%{name}-%{version}-%(id -u -n)
 buildarch: noarch
-source:    http://www.exit1.org/packages/Gtk2-Ex-FormFactory/dist/Gtk2-Ex-FormFactory-%version.tar.bz2
+source:    http://www.exit1.org/packages/Gtk2-Ex-FormFactory/dist/Gtk2-Ex-FormFactory-%upstream_version.tar.bz2
 BuildRequires: perl-Gtk2 perl-devel
 
 %description
@@ -36,8 +35,8 @@ introduction and overview of how this framework works refer to
 Gtk2::Ex::FormFactory::Intro.
 
 %prep
-%setup -q -n %{pkgname}-%{version} 
-chmod -R u+w %{_builddir}/%{pkgname}-%{version}
+%setup -q -n %{pkgname}-%{upstream_version} 
+chmod -R u+w %{_builddir}/%{pkgname}-%{upstream_version}
 
 %build
 grep -rsl '^#!.*perl' . |
