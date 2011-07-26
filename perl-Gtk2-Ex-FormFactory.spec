@@ -6,7 +6,7 @@
 name:      perl-Gtk2-Ex-FormFactory
 summary:   Gtk2-Ex-FormFactory - Makes building complex GUI's easy
 Version:   %perl_convert_version %upstream_version
-release:   %mkrel 1
+release:   %mkrel 2
 license:   LGPLv2+
 group:     Development/GNOME and GTK+
 url:       http://www.exit1.org/download/ff
