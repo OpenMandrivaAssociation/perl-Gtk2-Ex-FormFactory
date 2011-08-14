@@ -1,12 +1,12 @@
 %define pkgname Gtk2-Ex-FormFactory
 %define NVR %{pkgname}-%{version}-%{release}
 %define maketest 1
-%define upstream_version 0.65
+%define upstream_version 0.67
 
 name:      perl-Gtk2-Ex-FormFactory
 summary:   Gtk2-Ex-FormFactory - Makes building complex GUI's easy
 Version:   %perl_convert_version %upstream_version
-release:   %mkrel 2
+release:   %mkrel 1
 license:   LGPLv2+
 group:     Development/GNOME and GTK+
 url:       http://www.exit1.org/download/ff
