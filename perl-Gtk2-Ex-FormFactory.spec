@@ -75,3 +75,64 @@ find %{buildroot}%{_prefix}             \
 %perl_vendorlib/Gtk2/Ex/
 %_mandir/man3/Gtk2::Ex*
 
+
+
+%changelog
+* Fri Jan 20 2012 Götz Waschk <waschk@mandriva.org> 0.670.0-2mdv2012.0
++ Revision: 763023
+- rebuild
+
+* Sun Aug 14 2011 Götz Waschk <waschk@mandriva.org> 0.670.0-1
++ Revision: 694477
+- update to new version 0.67
+
+* Tue Jul 26 2011 Götz Waschk <waschk@mandriva.org> 0.650.0-2
++ Revision: 691695
+- rebuild
+
+* Tue Jul 28 2009 Götz Waschk <waschk@mandriva.org> 0.650.0-1mdv2011.0
++ Revision: 401498
+- use perl version macro
+- update license
+
+* Thu Dec 20 2007 Olivier Blin <blino@mandriva.org> 0.65-1mdv2009.0
++ Revision: 135846
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+
+* Sun Jul 02 2006 Götz Waschk <waschk@mandriva.org> 0.65-1mdv2007.0
+- New release 0.65
+
+* Sun Jun 18 2006 Götz Waschk <waschk@mandriva.org> 0.64-1mdk
+- New release 0.64
+
+* Mon Apr 24 2006 Götz Waschk <waschk@mandriva.org> 0.63-1mdk
+- New release 0.63
+
+* Mon Apr 10 2006 Götz Waschk <waschk@mandriva.org> 0.62-1mdk
+- New release 0.62
+
+* Mon Apr 03 2006 Götz Waschk <waschk@mandriva.org> 0.61-1mdk
+- New release 0.61
+
+* Tue Mar 28 2006 Götz Waschk <waschk@mandriva.org> 0.60-1mdk
+- New release 0.60
+
+* Thu Dec 29 2005 Götz Waschk <waschk@mandriva.org> 0.59-1mdk
+- New release 0.59
+
+* Fri Nov 04 2005 Götz Waschk <waschk@mandriva.org> 0.58-2mdk
+- fix dir (Anssi Hannuta)
+
+* Sun Oct 09 2005 Götz Waschk <waschk@mandriva.org> 0.58-1mdk
+- New release 0.58
+
+* Tue Aug 02 2005 Götz Waschk <waschk@mandriva.org> 0.57-1mdk
+- new version
+
+* Mon Jul 25 2005 Götz Waschk <waschk@mandriva.org> 0.56-1mdk
+- Initial build.
+
