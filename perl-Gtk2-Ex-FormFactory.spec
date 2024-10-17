@@ -9,7 +9,7 @@ Version:   %perl_convert_version %upstream_version
 release:   %mkrel 2
 license:   LGPLv2+
 group:     Development/GNOME and GTK+
-url:       http://www.exit1.org/download/ff
+url:       https://www.exit1.org/download/ff
 buildroot: %{_tmppath}/%{name}-%{version}-%(id -u -n)
 buildarch: noarch
 source:    http://www.exit1.org/packages/Gtk2-Ex-FormFactory/dist/Gtk2-Ex-FormFactory-%upstream_version.tar.bz2
