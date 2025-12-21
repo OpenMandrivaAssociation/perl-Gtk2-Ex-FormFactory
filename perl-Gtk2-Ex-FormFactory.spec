@@ -13,6 +13,7 @@ url:       https://www.exit1.org/download/ff
 buildroot: %{_tmppath}/%{name}-%{version}-%(id -u -n)
 buildarch: noarch
 source:    http://www.exit1.org/packages/Gtk2-Ex-FormFactory/dist/Gtk2-Ex-FormFactory-%upstream_version.tar.bz2
+BuildRequires:	make
 BuildRequires: perl-Gtk2 perl-devel
 
 %description
