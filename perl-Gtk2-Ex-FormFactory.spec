@@ -6,7 +6,7 @@
 name:      perl-Gtk2-Ex-FormFactory
 summary:   Gtk2-Ex-FormFactory - Makes building complex GUI's easy
 Version:	0.67
-Release:	6
+Release:	7
 license:   LGPLv2+
 group:     Development/GNOME and GTK+
 url:       https://www.exit1.org/download/ff
@@ -42,7 +42,7 @@ chmod -R u+w %{_builddir}/%{pkgname}-%{upstream_version}
 %build
 grep -rsl '^#!.*perl' . |
 grep -v '.bak$' |xargs --no-run-if-empty \
-%__perl -MExtUtils::MakeMaker -e 'MY->fixin(@ARGV)'
+perl -MExtUtils::MakeMaker -e 'MY->fixin(@ARGV)'
 CFLAGS="$RPM_OPT_FLAGS"
 perl Makefile.PL `perl -MExtUtils::MakeMaker -e ' print qq|PREFIX=%{buildroot}%{_prefix}| if \$ExtUtils::MakeMaker::VERSION =~ /5\.9[1-6]|6\.0[0-5]/ '` INSTALLDIRS=vendor
 %make_build
