@@ -6,7 +6,7 @@
 name:      perl-Gtk2-Ex-FormFactory
 summary:   Gtk2-Ex-FormFactory - Makes building complex GUI's easy
 Version:	0.67
-Release:	48
+Release:	49
 license:   LGPLv2+
 group:     Development/GNOME and GTK+
 url:       https://www.exit1.org/download/ff
@@ -36,7 +36,7 @@ introduction and overview of how this framework works refer to
 Gtk2::Ex::FormFactory::Intro.
 
 %prep
-%setup -q -n Gtk2-Ex-FormFactory-0.67 
+%setup -q -n Gtk2-Ex-FormFactory-0.67
 chmod -R u+w %{_builddir}/%{pkgname}-%{upstream_version}
 
 %build
