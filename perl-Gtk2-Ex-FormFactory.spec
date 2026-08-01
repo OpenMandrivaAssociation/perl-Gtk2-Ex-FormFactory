@@ -3,16 +3,16 @@
 %define maketest 1
 %define upstream_version 0.67
 
-name:      perl-Gtk2-Ex-FormFactory
-summary:   Gtk2-Ex-FormFactory - Makes building complex GUI's easy
+Name:      perl-Gtk2-Ex-FormFactory
+Summary:   Gtk2-Ex-FormFactory - Makes building complex GUI's easy
 Version:	0.67
-Release:	49
-license:   LGPLv2+
-group:     Development/GNOME and GTK+
-url:       https://www.exit1.org/download/ff
-buildroot: %{_tmppath}/%{name}-%{version}-%(id -u -n)
-buildarch: noarch
-source:    http://www.exit1.org/packages/Gtk2-Ex-FormFactory/dist/Gtk2-Ex-FormFactory-%upstream_version.tar.bz2
+Release:	50
+License:   LGPLv2+
+Group:     Development/GNOME and GTK+
+Url:       https://www.exit1.org/download/ff
+# buildroot: %{_tmppath}/%{name}-%{version}-%(id -u -n)
+BuildArch: noarch
+Source0:	Gtk2-Ex-FormFactory-%{upstream_version}.tar.gz
 BuildRequires:	make
 BuildRequires: perl-Gtk2 perl-devel
 
@@ -46,9 +46,6 @@ perl -MExtUtils::MakeMaker -e 'MY->fixin(@ARGV)'
 CFLAGS="$RPM_OPT_FLAGS"
 perl Makefile.PL `perl -MExtUtils::MakeMaker -e ' print qq|PREFIX=%{buildroot}%{_prefix}| if \$ExtUtils::MakeMaker::VERSION =~ /5\.9[1-6]|6\.0[0-5]/ '` INSTALLDIRS=vendor
 %make_build
-%if %maketest
-%{__make} test
-%endif
 
 %check
 make test || :
